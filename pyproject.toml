@@ -13,8 +13,12 @@ nltk = "^3.9.1"
 openpyxl = "^3.1.5"
 requests = "^2.32.5"
 googletrans = "4.0.0-rc1"
+reverso-context-api = "^0.5"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+package-mode = false

@@ -60,12 +60,12 @@ except ImportError:
 # Configuration constants
 # -----------------------------------------------------------------------------
 # File paths
-COCA_WORDS_PATH = './files/wordFrequency.xlsx'
+COCA_WORDS_PATH = './data/wordFrequency.xlsx'
 # Use absolute path to avoid shell resolution issues on Windows
 FFMPEG_PATH = os.path.join(os.getcwd(), 'ffmpeg', 'ffmpeg.exe')
 TEMP_DIR = './temp'
 AUDIO_DIR = './audio'
-COCA_CACHE_PATH = './files/coca_top_lemmas.txt'
+COCA_CACHE_PATH = './data/coca_top_lemmas.txt'
 
 # NLTK settings
 BROWN_WORDS_COUNT = 10000
@@ -118,7 +118,7 @@ class WordExtractor:
         # top 5000 of Top 60,000 "lemmas" from COCA corpus
         self.coca_path = COCA_WORDS_PATH
         self.coca_cache_path = COCA_CACHE_PATH
-        # self.download_nltk_resources()
+        self.download_nltk_resources()
         self.brown_words = self.get_most_frequent_brownWords(BROWN_WORDS_COUNT)
         self._book_lemmas = None  # Initialize as None, will be set by extract_words
         # Preload COCA lemmas (with caching)

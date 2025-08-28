@@ -32,8 +32,8 @@ poetry install
 # Activate virtual environment
 poetry shell
 
-# Download NLTK data (required for first run)
-python -c "import nltk; nltk.download('stopwords'); nltk.download('brown'); nltk.download('wordnet'); nltk.download('punkt')"
+# NLTK data will be downloaded automatically on first run
+# (The script handles this internally via download_nltk_resources())
 
 # Download FFmpeg and place ffmpeg.exe in the ffmpeg/ directory
 # (or add FFmpeg to your system PATH)
