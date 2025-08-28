@@ -1,0 +1,77 @@
+# -----------------------------
+# Python cache and artifacts
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# -----------------------------
+# Virtual environments
+# -----------------------------
+venv/
+.venv/
+env/
+.env/
+.python-version
+
+# -----------------------------
+# IDE / Editors
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# -----------------------------
+# OS-specific files
+# -----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------------
+# Logs and local databases
+# -----------------------------
+*.log
+*.sqlite3
+*.db
+
+# -----------------------------
+# Build/output & temp data
+# -----------------------------
+/temp/
+!/temp/.gitkeep
+/audio/
+!/audio/.gitkeep
+
+# Generated media/artifacts
+*.wav
+*.mp3
+*.mp4
+*.m4a
+
+# -----------------------------
+# Heavy binaries/tools (keep out of git)
+# -----------------------------
+/ffmpeg/
+/piper/
+/chrome-win64/
+/chromedriver-win64/
+
+# -----------------------------
+# Notebooks checkpoints
+# -----------------------------
+.ipynb_checkpoints/
+
+# -----------------------------
+# Local config overrides (untracked)
+# -----------------------------
+config.local.*
+
+# Project structure documentation (auto-generated)
+# -----------------------------
+tree.txt
+
+

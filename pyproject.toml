@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "vocab-harvester"
+version = "0.1.0"
+description = ""
+authors = ["iamgm <iamgm@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.3.2"
+numpy = "^2.3.2"
+nltk = "^3.9.1"
+openpyxl = "^3.1.5"
+requests = "^2.32.5"
+googletrans = "4.0.0-rc1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
