@@ -54,6 +54,25 @@ pip install text_to_speech reverso_context_api
 
 ## Quick Start
 
+### Windows (простой способ)
+```batch
+# Basic usage with default settings
+run.bat
+
+# Process a specific book file
+run.bat --book-path ./txt/my_book.txt
+
+# Use custom number of worker threads
+run.bat --workers 8
+
+# Specify output directory
+run.bat --output-dir ./my_audio
+
+# Get help
+run.bat --help
+```
+
+### Linux/Mac (стандартный способ)
 ```bash
 # Basic usage with default settings
 python main.py
@@ -198,17 +217,29 @@ vocab-harvester/
 
 ## Usage Examples
 
-### Basic Processing
+### Windows (простой способ)
+```batch
+# Process default book with 4 threads
+run.bat
+
+# Process specific book with 8 threads
+run.bat -b ./txt/my_book.txt -w 8
+
+# Custom output directory with 16 threads
+run.bat -b ./txt/my_book.txt -w 16 -o ./custom_audio
+
+# Process with specific settings
+run.bat --book-path ./txt/my_book.txt --workers 12 --output-dir ./my_audio
+```
+
+### Linux/Mac (стандартный способ)
 ```bash
 # Process default book with 4 threads
 python main.py
 
 # Process specific book with 8 threads
 python main.py -b ./txt/my_book.txt -w 8
-```
 
-### Advanced Processing
-```bash
 # Custom output directory with 16 threads
 python main.py -b ./txt/my_book.txt -w 16 -o ./custom_audio
 
