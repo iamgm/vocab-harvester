@@ -20,5 +20,4 @@ reverso-context-api = "^0.5"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry.extras]
-package-mode = false
+
