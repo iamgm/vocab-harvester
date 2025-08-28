@@ -1,2 +1,2 @@
 @echo off
-poetry run python main.py %*
+poetry run start %*
