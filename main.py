@@ -144,15 +144,16 @@ class WordExtractor:
         return book_lemmas
 
     def download_nltk_resources(self) -> None:
-        resources = ['brown', 'punkt', 'stopwords',
+        # Добавляем 'punkt_tab' для решения проблемы с word_tokenize
+        resources = ['brown', 'punkt', 'punkt_tab', 'stopwords',
                      'averaged_perceptron_tagger', 'wordnet']
 
         for resource in resources:
             try:
-                nltk.data.find(resource)
-            except LookupError:
-                thread_safe_print(f"{resource} not found. Downloading...")
-                nltk.download(resource)
+                # nltk.download() достаточно умен, чтобы пропустить уже скачанные пакеты
+                nltk.download(resource, quiet=True)
+            except Exception as e:
+                thread_safe_print(f"Failed to download NLTK resource {resource}: {e}")
 
     def get_most_frequent_brownWords(self, num) -> set:
         fdist = nltk.FreqDist(w.lower() for w in brown.words())
