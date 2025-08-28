@@ -11,6 +11,47 @@ A multi-threaded application for processing text files, extracting unknown words
 - **Audio processing** with FFmpeg
 - **Cross-platform compatibility**
 
+## Installation
+
+### Prerequisites
+
+- Python 3.7+
+- Poetry (Python package manager)
+- FFmpeg (download from [ffmpeg.org](https://ffmpeg.org/download.html))
+
+### Setup with Poetry
+
+```bash
+# Clone the repository
+git clone https://github.com/iamgm/vocab-harvester.git
+cd vocab-harvester
+
+# Install dependencies
+poetry install
+
+# Activate virtual environment
+poetry shell
+
+# Download NLTK data (required for first run)
+python -c "import nltk; nltk.download('stopwords'); nltk.download('brown'); nltk.download('wordnet'); nltk.download('punkt')"
+
+# Download FFmpeg and place ffmpeg.exe in the ffmpeg/ directory
+# (or add FFmpeg to your system PATH)
+
+# Verify installation
+python -c "import numpy, pandas, nltk; print('Dependencies installed successfully!')"
+```
+
+### Alternative: Manual Installation
+
+```bash
+# Install required packages
+pip install numpy pandas nltk googletrans==4.0.0rc1 gtts
+
+# Install optional packages for enhanced functionality
+pip install text_to_speech reverso_context_api
+```
+
 ## Quick Start
 
 ```bash
