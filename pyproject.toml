@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Python tool to extract vocabulary from text and generate audio flashcards."
 authors = ["iamgm <iamgm@yandex.ru>"]
 readme = "README.md"
+packages = [{include = "main", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
